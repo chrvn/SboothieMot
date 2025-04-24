@@ -41,7 +41,16 @@ entities:
 slots:
   diet_type:
     type: text
+    mappings:
+      - type: from_entity
+        entity: diet_type
   ingredient:
     type: text
+    mappings:
+      - type: from_entity
+        entity: ingredient
   smoothie_name:
     type: text
+    mappings:
+      - type: from_entity
+        entity: smoothie_name
