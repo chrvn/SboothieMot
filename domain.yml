@@ -32,3 +32,16 @@ responses:
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+
+entities:
+  - diet_type
+  - ingredient
+  - smoothie_name
+
+slots:
+  diet_type:
+    type: text
+  ingredient:
+    type: text
+  smoothie_name:
+    type: text

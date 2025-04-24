@@ -89,3 +89,24 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+
+- intent: ask_by_diet
+  examples: |
+    - Show me a [vegan](diet_type) smoothie
+    - I need a [nut-free](diet_type) option
+    - Do you have any [non-dairy](diet_type) smoothies?
+    - List all [vegan](diet_type) and [non-dairy](diet_type) smoothies
+
+- intent: ask_by_ingredient
+  examples: |
+    - Which smoothies have [mango](ingredient)?
+    - I am looking for something with [peanut butter](ingredient)
+    - Do any recipes use [avocado](ingredient)?
+    - What smoothies contain [blueberries](ingredient)?
+
+- intent: ask_by_name
+  examples: |
+    - Tell me about the [Strawberry-Orange](smoothie_name) smoothie
+    - What's in the [Avocado-Coconut](smoothie_name)?
+    - Give me the recipe for [Blueberry-Mango](smoothie_name)
+    - What is the [Carrot](smoothie_name) smoothie like?
