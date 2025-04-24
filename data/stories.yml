@@ -28,3 +28,10 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
+
+- story: vegan test
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_by_diet
+  - action: utter_diet

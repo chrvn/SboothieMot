@@ -110,3 +110,12 @@ nlu:
     - What's in the [Avocado-Coconut](smoothie_name)?
     - Give me the recipe for [Blueberry-Mango](smoothie_name)
     - What is the [Carrot](smoothie_name) smoothie like?
+
+- synonym: non-dairy
+  examples: |
+    - lactose intolerant
+    - dairy-free
+    - alactasia
+    - hypolactasia
+    - lactose malabsorption
+    - milk sugar intolerance
