@@ -66,6 +66,30 @@ responses:
           value: "non-dairy"
       text: "ok poopy"
 
+  utter_ingredient:
+    - condition:
+        - type: slot
+          name: ingredient
+          value: "mango"
+      text: "Here are some smoothies with mango: Blueberry-Mango"
+    - condition:
+        - type: slot
+          name: ingredient
+          value: "avocado"
+      text: "Here are some smoothies with avocado: Avocado-Coconut"
+
+  utter_recipe:
+    - condition:
+        - type: slot
+          name: smoothie_name
+          value: "Strawberry-Orange"
+      text: "the recipe for blueberry mango is 1 blueberry 1 mango and blend"
+    - condition:
+        - type: slot
+          name: smoothie_name
+          value: "Avocado-Coconut"
+      text: "the recipe for avocado coconut is 1 avocado 1 coconut and blend"
+
 
 session_config:
   session_expiration_time: 60

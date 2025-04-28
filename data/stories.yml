@@ -29,9 +29,20 @@ stories:
   - intent: deny
   - action: utter_goodbye
 
-- story: vegan test
+- story: smoothie_by_diet
   steps:
   - intent: greet
   - action: utter_greet
   - intent: ask_by_diet
   - action: utter_diet
+  - intent: ask_by_name
+  - action: utter_recipe
+
+- story: smoothie_by_ingredient
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_by_ingredient
+    - action: utter_ingredient
+    - intent: ask_by_name
+    - action: utter_recipe

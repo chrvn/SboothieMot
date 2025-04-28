@@ -119,3 +119,7 @@ nlu:
     - hypolactasia
     - lactose malabsorption
     - milk sugar intolerance
+
+- synonym: vegan
+  examples: |
+    - plant-based
