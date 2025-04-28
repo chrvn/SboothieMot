@@ -17,6 +17,9 @@ entities:
   - ingredient
   - smoothie_name
 
+actions:
+  - action_find_by_ingredient
+
 slots:
   diet_type:
     type: text
@@ -67,16 +70,17 @@ responses:
       text: "ok poopy"
 
   utter_ingredient:
-    - condition:
-        - type: slot
-          name: ingredient
-          value: "mango"
-      text: "Here are some smoothies with mango: Blueberry-Mango"
-    - condition:
-        - type: slot
-          name: ingredient
-          value: "avocado"
-      text: "Here are some smoothies with avocado: Avocado-Coconut"
+      - text: "Sorry, please ask about an ingredient!"
+    # - condition:
+    #     - type: slot
+    #       name: ingredient
+    #       value: "mango"
+    #   text: "Here are some smoothies with mango: Blueberry-Mango"
+    # - condition:
+    #     - type: slot
+    #       name: ingredient
+    #       value: "avocado"
+    #   text: "Here are some smoothies with avocado: Avocado-Coconut"
 
   utter_recipe:
     - condition:
