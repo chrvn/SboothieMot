@@ -60,3 +60,33 @@ class action_find_by_ingredient(Action):
             dispatcher.utter_message(text=f"I found these smoothies with {requested_ingredient}: {', '.join(smoothie_names)}")
 
         return []
+
+class action_find_by_diet(Action):
+
+    def name(self) -> Text:
+        return "action_find_by_diet"
+    
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        # Load the CSV
+        df = pd.read_csv('data/smoothies.csv')
+
+        # Get the user's request
+        requested_diet = next(tracker.get_latest_entity_values("diet_type"), None)
+        
+        if not requested_diet:
+            dispatcher.utter_message(text="Do you have any other dietary restrictions?")
+            return []
+
+        # Find matching smoothies
+        matching = df[df['Diet'].str.contains(requested_diet, case=False, na=False)]
+
+        if matching.empty:
+            dispatcher.utter_message(text=f"Sorry, I couldn't find a smoothie that is {requested_diet}.")
+        else:
+            smoothie_names = matching['Recipe Name'].tolist()
+            dispatcher.utter_message(text=f"I found these smoothies that are {requested_diet}: {', '.join(smoothie_names)}")
+
+        return []

@@ -34,7 +34,7 @@ stories:
   - intent: greet
   - action: utter_greet
   - intent: ask_by_diet
-  - action: utter_diet
+  - action: action_find_by_diet
   - intent: ask_by_name
   - action: utter_recipe
 

@@ -19,6 +19,7 @@ entities:
 
 actions:
   - action_find_by_ingredient
+  - action_find_by_diet
 
 slots:
   diet_type:
@@ -57,17 +58,17 @@ responses:
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
 
-  utter_diet:
-    - condition: 
-        - type: slot
-          name: diet_type
-          value: "vegan"
-      text: "Here are some vegan smoothies: [insert smoothies]"
-    - condition:
-        - type: slot
-          name: diet_type
-          value: "non-dairy"
-      text: "ok poopy"
+  # utter_diet:
+  #   - condition: 
+  #       - type: slot
+  #         name: diet_type
+  #         value: "vegan"
+  #     text: "Here are some vegan smoothies: [insert smoothies]"
+  #   - condition:
+  #       - type: slot
+  #         name: diet_type
+  #         value: "non-dairy"
+  #     text: "ok poopy"
 
   utter_ingredient:
       - text: "Sorry, please ask about an ingredient!"

@@ -94,6 +94,7 @@ nlu:
   examples: |
     - Show me a [vegan](diet_type) smoothie
     - I need a [nut-free](diet_type) option
+    - I am [vegan](diet_type)
     - Do you have any [non-dairy](diet_type) smoothies?
     - List all [vegan](diet_type) and [non-dairy](diet_type) smoothies
 
@@ -103,6 +104,7 @@ nlu:
     - I am looking for something with [peanut butter](ingredient)
     - Do any recipes use [avocado](ingredient)?
     - What smoothies contain [blueberries](ingredient)?
+    - I want a [strawberry](ingredient) smoothie.
 
 - intent: ask_by_name
   examples: |
