@@ -35,8 +35,6 @@ stories:
   - action: utter_greet
   - intent: ask_by_diet
   - action: action_find_by_diet
-  - intent: ask_by_name
-  - action: utter_recipe
 
 - story: smoothie_by_ingredient
   steps:
@@ -44,6 +42,3 @@ stories:
     - action: utter_greet
     - intent: ask_by_ingredient
     - action: action_find_by_ingredient
-    - action: utter_ingredient
-    - intent: ask_by_name
-    - action: utter_recipe
